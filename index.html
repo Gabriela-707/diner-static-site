@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mel's Moonlight Diner</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="nav-container">
+      <a href="index.html" class="logo">Mel's <span>Moonlight</span> Diner</a>
+      <button class="menu-toggle" aria-label="Toggle menu"
+        onclick="document.querySelector('nav ul').classList.toggle('open')">
+        <span></span><span></span><span></span>
+      </button>
+      <nav>
+        <ul>
+          <li><a href="index.html" class="active">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="menu.html">Menu</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero"
+    style="background: linear-gradient(rgba(51,34,40,0.55), rgba(51,34,40,0.65)), url('images/hero-banner.png') center/cover no-repeat;">
+    <h1>Good Food, Good Times</h1>
+    <p>Step into Mel's Moonlight Diner &mdash; where classic comfort food meets a cozy retro vibe. Open late, serving
+      smiles since 1962.</p>
+    <a href="menu.html" class="btn btn-primary">View Our Menu</a>
+    <a href="contact.html" class="btn btn-secondary">Find Us</a>
+  </section>
+
+  <!-- Features -->
+  <section class="section">
+    <h2 class="section-title">Why Folks Love Mel's</h2>
+    <p class="section-subtitle">A few things that keep our regulars coming back.</p>
+    <div class="card-grid">
+      <div class="card">
+        <div class="card-icon pink">&#9749;</div>
+        <h3>All-Day Breakfast</h3>
+        <p>Fluffy pancakes, crispy bacon, and bottomless coffee from open to close. Breakfast doesn't watch the clock
+          here.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon mint">&#9733;</div>
+        <h3>Hand-Spun Shakes</h3>
+        <p>Thick, creamy milkshakes made the old-fashioned way with real ice cream and fresh ingredients.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon peach">&#9834;</div>
+        <h3>Jukebox Vibes</h3>
+        <p>Classic tunes on the jukebox set the mood every evening. Drop a quarter and pick your favorite.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Call to Action -->
+  <section class="hero"
+    style="background: linear-gradient(rgba(51,34,40,0.55), rgba(51,34,40,0.65)), url('images/diner-exterior.png') center/cover no-repeat; padding: 9.5rem 1.5rem;">
+    <h2>Open Every Night Until Midnight</h2>
+    <p>Whether it's a late-night craving or a weekend brunch, we've got a booth with your name on it.</p>
+    <a href="contact.html" class="btn btn-primary">Get Directions</a>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <span class="logo">Mel's <span>Moonlight</span> Diner</span>
+    <p>&copy; 2026 Mel's Moonlight Diner. All rights reserved.</p>
+  </footer>
+
+</body>
+
+</html>

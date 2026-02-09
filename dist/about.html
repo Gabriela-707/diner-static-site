@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About - Mel's Moonlight Diner</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="nav-container">
+      <a href="index.html" class="logo">Mel's <span>Moonlight</span> Diner</a>
+      <button class="menu-toggle" aria-label="Toggle menu" onclick="document.querySelector('nav ul').classList.toggle('open')">
+        <span></span><span></span><span></span>
+      </button>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html" class="active">About</a></li>
+          <li><a href="menu.html">Menu</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Page Header -->
+  <section class="page-header">
+    <h1>Our Story</h1>
+    <p>A little history, a lot of heart.</p>
+  </section>
+
+  <!-- About Content -->
+  <section class="section">
+    <div class="about-grid">
+      <div class="about-image"><img src="images/logo.png" alt="Mel's Moonlight Diner logo"></div>
+      <div class="about-text">
+        <h2>Since 1962</h2>
+        <p>Mel's Moonlight Diner started as a tiny roadside stop on Route 9, serving truckers and travelers the best pie in the county. Mel himself &mdash; a former Navy cook with a knack for comfort food &mdash; believed that a warm meal could turn any bad day around.</p>
+        <p>Over six decades later, the neon sign still glows, the coffee's still strong, and the same family recipes are made from scratch every single day. We've grown, but the spirit hasn't changed one bit.</p>
+        <ul class="values-list">
+          <li>Recipes passed down through three generations</li>
+          <li>Locally sourced ingredients whenever possible</li>
+          <li>A welcoming place for everyone, every night</li>
+          <li>Community first &mdash; we sponsor local events year-round</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Team -->
+  <section class="section" style="padding-top: 0;">
+    <h2 class="section-title">The Crew</h2>
+    <p class="section-subtitle">The people who make it all happen.</p>
+    <div class="card-grid">
+      <div class="card">
+        <div class="card-icon lavender">&#9787;</div>
+        <h3>Donna Mae</h3>
+        <p>Mel's granddaughter and current owner. She runs the front of house and knows every regular by name.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon peach">&#9787;</div>
+        <h3>Big Eddie</h3>
+        <p>Head cook for 20 years. If it's on the grill, Eddie's got it handled. His burgers are legendary.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon sky">&#9787;</div>
+        <h3>Rosie</h3>
+        <p>Our pie baker extraordinaire. Every crust is hand-rolled, and every filling is made from scratch daily.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <span class="logo">Mel's <span>Moonlight</span> Diner</span>
+    <p>&copy; 2026 Mel's Moonlight Diner. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>

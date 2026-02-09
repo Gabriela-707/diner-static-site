@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Menu - Mel's Moonlight Diner</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="nav-container">
+      <a href="index.html" class="logo">Mel's <span>Moonlight</span> Diner</a>
+      <button class="menu-toggle" aria-label="Toggle menu" onclick="document.querySelector('nav ul').classList.toggle('open')">
+        <span></span><span></span><span></span>
+      </button>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="menu.html" class="active">Menu</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Page Header -->
+  <section class="page-header">
+    <h1>Our Menu</h1>
+    <p>Classic diner fare made with love &mdash; from sunrise to midnight.</p>
+  </section>
+
+  <!-- Menu -->
+  <section class="section">
+
+    <!-- Breakfast -->
+    <div class="menu-category">
+      <h3>Breakfast &amp; Brunch</h3>
+      <div class="menu-item">
+        <div>
+          <div class="menu-item-name">Moonlight Stack</div>
+          <div class="menu-item-desc">Three buttermilk pancakes, butter, and warm maple syrup</div>
+        </div>
+        <div class="menu-item-price">$8.95</div>
+      </div>
+      <div class="menu-item">
+        <div>
+          <div class="menu-item-name">The Early Bird</div>
+          <div class="menu-item-desc">Two eggs any style, bacon or sausage, hash browns, and toast</div>
+        </div>
+        <div class="menu-item-price">$10.50</div>
+      </div>
+      <div class="menu-item">
+        <div>
+          <div class="menu-item-name">Biscuits &amp; Gravy</div>
+          <div class="menu-item-desc">Fluffy buttermilk biscuits smothered in house sausage gravy</div>
+        </div>
+        <div class="menu-item-price">$9.25</div>
+      </div>
+      <div class="menu-item">
+        <div>
+          <div class="menu-item-name">French Toast Royale</div>
+          <div class="menu-item-desc">Thick-cut brioche, powdered sugar, strawberries, and whipped cream</div>
+        </div>
+        <div class="menu-item-price">$10.95</div>
+      </div>
+    </div>
+
+    <!-- Burgers & Sandwiches -->
+    <div class="menu-category">
+      <h3>Burgers &amp; Sandwiches</h3>
+      <div class="menu-item">
+        <div>
+          <div class="menu-item-name">The Mel Burger</div>
+          <div class="menu-item-desc">Half-pound patty, American cheese, lettuce, tomato, special sauce</div>
+        </div>
+        <div class="menu-item-price">$12.95</div>
+      </div>
+      <div class="menu-item">
+        <div>
+          <div class="menu-item-name">Patty Melt</div>
+          <div class="menu-item-desc">Seasoned beef, Swiss cheese, caramelized onions on grilled rye</div>
+        </div>
+        <div class="menu-item-price">$11.75</div>
+      </div>
+      <div class="menu-item">
+        <div>
+          <div class="menu-item-name">Classic Club</div>
+          <div class="menu-item-desc">Turkey, bacon, lettuce, tomato, and mayo on toasted sourdough</div>
+        </div>
+        <div class="menu-item-price">$11.50</div>
+      </div>
+      <div class="menu-item">
+        <div>
+          <div class="menu-item-name">Grilled Cheese Deluxe</div>
+          <div class="menu-item-desc">Three cheeses on thick-cut bread with tomato soup for dipping</div>
+        </div>
+        <div class="menu-item-price">$9.50</div>
+      </div>
+    </div>
+
+    <!-- Mains -->
+    <div class="menu-category">
+      <h3>Blue Plate Specials</h3>
+      <div class="menu-item">
+        <div>
+          <div class="menu-item-name">Chicken Fried Steak</div>
+          <div class="menu-item-desc">Breaded and pan-fried, cream gravy, mashed potatoes, green beans</div>
+        </div>
+        <div class="menu-item-price">$14.95</div>
+      </div>
+      <div class="menu-item">
+        <div>
+          <div class="menu-item-name">Meatloaf Dinner</div>
+          <div class="menu-item-desc">Mel's original recipe with mashed potatoes and roasted vegetables</div>
+        </div>
+        <div class="menu-item-price">$13.50</div>
+      </div>
+      <div class="menu-item">
+        <div>
+          <div class="menu-item-name">Fish &amp; Chips</div>
+          <div class="menu-item-desc">Beer-battered cod, hand-cut fries, coleslaw, and tartar sauce</div>
+        </div>
+        <div class="menu-item-price">$13.95</div>
+      </div>
+    </div>
+
+    <!-- Shakes & Desserts -->
+    <div class="menu-category">
+      <h3>Shakes &amp; Desserts</h3>
+      <div class="menu-item">
+        <div>
+          <div class="menu-item-name">Hand-Spun Milkshake</div>
+          <div class="menu-item-desc">Vanilla, chocolate, strawberry, or peanut butter</div>
+        </div>
+        <div class="menu-item-price">$6.95</div>
+      </div>
+      <div class="menu-item">
+        <div>
+          <div class="menu-item-name">Rosie's Pie Slice</div>
+          <div class="menu-item-desc">Daily selection &mdash; ask your server what's fresh from the oven</div>
+        </div>
+        <div class="menu-item-price">$5.50</div>
+      </div>
+      <div class="menu-item">
+        <div>
+          <div class="menu-item-name">Root Beer Float</div>
+          <div class="menu-item-desc">Classic root beer with a generous scoop of vanilla ice cream</div>
+        </div>
+        <div class="menu-item-price">$5.25</div>
+      </div>
+      <div class="menu-item">
+        <div>
+          <div class="menu-item-name">Banana Split</div>
+          <div class="menu-item-desc">Three scoops, hot fudge, whipped cream, nuts, and a cherry</div>
+        </div>
+        <div class="menu-item-price">$7.95</div>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <span class="logo">Mel's <span>Moonlight</span> Diner</span>
+    <p>&copy; 2026 Mel's Moonlight Diner. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>

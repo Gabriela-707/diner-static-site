@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gallery - Mel's Moonlight Diner</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="nav-container">
+      <a href="index.html" class="logo">Mel's <span>Moonlight</span> Diner</a>
+      <button class="menu-toggle" aria-label="Toggle menu" onclick="document.querySelector('nav ul').classList.toggle('open')">
+        <span></span><span></span><span></span>
+      </button>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="menu.html">Menu</a></li>
+          <li><a href="gallery.html" class="active">Gallery</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Page Header -->
+  <section class="page-header">
+    <h1>Photo Gallery</h1>
+    <p>A look at the dishes that keep our regulars coming back.</p>
+  </section>
+
+  <!-- Gallery -->
+  <section class="section" style="max-width: 1400px;">
+
+    <!-- Breakfast & Brunch -->
+    <h2 class="section-title">Breakfast &amp; Brunch</h2>
+    <p class="section-subtitle">Rise and shine with our morning favorites.</p>
+    <div class="gallery-grid">
+      <div class="gallery-item">
+        <div class="gallery-img" style="background: var(--rose);">&#127858;</div>
+        <p class="gallery-label">Moonlight Stack</p>
+      </div>
+      <div class="gallery-item">
+        <div class="gallery-img" style="background: var(--ice);">&#127859;</div>
+        <p class="gallery-label">The Early Bird</p>
+      </div>
+      <div class="gallery-item">
+        <div class="gallery-img" style="background: var(--blue-soft);">&#129480;</div>
+        <p class="gallery-label">Biscuits &amp; Gravy</p>
+      </div>
+      <div class="gallery-item">
+        <div class="gallery-img" style="background: var(--rose);">&#127838;</div>
+        <p class="gallery-label">French Toast Royale</p>
+      </div>
+    </div>
+
+    <!-- Burgers & Sandwiches -->
+    <h2 class="section-title" style="margin-top: 3rem;">Burgers &amp; Sandwiches</h2>
+    <p class="section-subtitle">Stacked high and grilled to perfection.</p>
+    <div class="gallery-grid">
+      <div class="gallery-item">
+        <div class="gallery-img" style="background: var(--blue-soft);">&#127828;</div>
+        <p class="gallery-label">The Mel Burger</p>
+      </div>
+      <div class="gallery-item">
+        <div class="gallery-img" style="background: var(--rose);">&#129386;</div>
+        <p class="gallery-label">Patty Melt</p>
+      </div>
+      <div class="gallery-item">
+        <div class="gallery-img" style="background: var(--ice);">&#129386;</div>
+        <p class="gallery-label">Classic Club</p>
+      </div>
+      <div class="gallery-item">
+        <div class="gallery-img" style="background: var(--blue-soft);">&#129472;</div>
+        <p class="gallery-label">Grilled Cheese Deluxe</p>
+      </div>
+    </div>
+
+    <!-- Blue Plate Specials -->
+    <h2 class="section-title" style="margin-top: 3rem;">Blue Plate Specials</h2>
+    <p class="section-subtitle">Hearty dinners just like home.</p>
+    <div class="gallery-grid">
+      <div class="gallery-item">
+        <div class="gallery-img" style="background: var(--rose);">&#127830;</div>
+        <p class="gallery-label">Chicken Fried Steak</p>
+      </div>
+      <div class="gallery-item">
+        <div class="gallery-img" style="background: var(--ice);">&#127830;</div>
+        <p class="gallery-label">Meatloaf Dinner</p>
+      </div>
+      <div class="gallery-item">
+        <div class="gallery-img" style="background: var(--blue-soft);">&#127843;</div>
+        <p class="gallery-label">Fish &amp; Chips</p>
+      </div>
+    </div>
+
+    <!-- Shakes & Desserts -->
+    <h2 class="section-title" style="margin-top: 3rem;">Shakes &amp; Desserts</h2>
+    <p class="section-subtitle">The sweet finish to every meal.</p>
+    <div class="gallery-grid">
+      <div class="gallery-item">
+        <div class="gallery-img" style="background: var(--blue-soft);">&#129371;</div>
+        <p class="gallery-label">Hand-Spun Milkshake</p>
+      </div>
+      <div class="gallery-item">
+        <div class="gallery-img" style="background: var(--rose);">&#129383;</div>
+        <p class="gallery-label">Rosie's Pie Slice</p>
+      </div>
+      <div class="gallery-item">
+        <div class="gallery-img" style="background: var(--ice);">&#127866;</div>
+        <p class="gallery-label">Root Beer Float</p>
+      </div>
+      <div class="gallery-item">
+        <div class="gallery-img" style="background: var(--blue-soft);">&#127848;</div>
+        <p class="gallery-label">Banana Split</p>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <span class="logo">Mel's <span>Moonlight</span> Diner</span>
+    <p>&copy; 2026 Mel's Moonlight Diner. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
