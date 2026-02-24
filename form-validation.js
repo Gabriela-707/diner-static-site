@@ -15,6 +15,7 @@
       subjectField.addEventListener('blur', () => validateSubject(subjectField));
       messageField.addEventListener('blur', () => validateMessage(messageField));
 
+      const formIntro = document.getElementById('form-intro');
       const successMsg = document.getElementById('form-success');
 
       form.addEventListener('submit', (event) => {
@@ -22,6 +23,7 @@
 
         const isValid = validateForm();
         if (isValid) {
+          if (formIntro) formIntro.hidden = true;
           form.hidden = true;
           if (successMsg) successMsg.hidden = false;
         }
