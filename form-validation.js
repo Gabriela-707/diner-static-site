@@ -2,17 +2,6 @@
   const form = document.getElementById('contact-form');
 
   if (form) {
-    form.addEventListener('submit', (event) => {
-      event.preventDefault();
-
-      const isValid = validateForm();
-      if (isValid) {
-        console.log('Form is valid — ready to submit.');
-      }
-    });
-  }
-
-  function validateForm() {
     const nameField = document.getElementById('name');
     const emailField = document.getElementById('email');
     const subjectField = document.getElementById('subject');
@@ -20,40 +9,71 @@
 
     if (!nameField || !emailField || !subjectField || !messageField) {
       console.error('One or more form fields are missing from the DOM.');
-      return false;
+    } else {
+      nameField.addEventListener('blur', () => validateName(nameField));
+      emailField.addEventListener('blur', () => validateEmail(emailField));
+      subjectField.addEventListener('blur', () => validateSubject(subjectField));
+      messageField.addEventListener('blur', () => validateMessage(messageField));
+
+      form.addEventListener('submit', (event) => {
+        event.preventDefault();
+
+        const isValid = validateForm();
+        if (isValid) {
+          console.log('Form is valid — ready to submit.');
+        }
+      });
     }
 
-    clearError(nameField);
-    clearError(emailField);
-    clearError(subjectField);
-    clearError(messageField);
-
-    let isValid = true;
-
-    if (!nameField.value.trim()) {
-      showError(nameField, 'Please enter your name.');
-      isValid = false;
+    function validateForm() {
+      const results = [
+        validateName(nameField),
+        validateEmail(emailField),
+        validateSubject(subjectField),
+        validateMessage(messageField),
+      ];
+      return results.every(Boolean);
     }
 
-    if (!emailField.value.trim()) {
-      showError(emailField, 'Please enter your email address.');
-      isValid = false;
-    } else if (!isValidEmail(emailField.value.trim())) {
-      showError(emailField, 'Please enter a valid email address.');
-      isValid = false;
+    function validateName(field) {
+      clearError(field);
+      if (!field.value.trim()) {
+        showError(field, 'Please enter your name.');
+        return false;
+      }
+      return true;
     }
 
-    if (!subjectField.value.trim()) {
-      showError(subjectField, 'Please enter a subject.');
-      isValid = false;
+    function validateEmail(field) {
+      clearError(field);
+      if (!field.value.trim()) {
+        showError(field, 'Please enter your email address.');
+        return false;
+      }
+      if (!isValidEmail(field.value.trim())) {
+        showError(field, 'Please enter a valid email address.');
+        return false;
+      }
+      return true;
     }
 
-    if (!messageField.value.trim()) {
-      showError(messageField, 'Please enter a message.');
-      isValid = false;
+    function validateSubject(field) {
+      clearError(field);
+      if (!field.value.trim()) {
+        showError(field, 'Please enter a subject.');
+        return false;
+      }
+      return true;
     }
 
-    return isValid;
+    function validateMessage(field) {
+      clearError(field);
+      if (!field.value.trim()) {
+        showError(field, 'Please enter a message.');
+        return false;
+      }
+      return true;
+    }
   }
 
   function isValidEmail(value) {
