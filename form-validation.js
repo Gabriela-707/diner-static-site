@@ -41,6 +41,7 @@
         showError(field, 'Please enter your name.');
         return false;
       }
+      showValid(field);
       return true;
     }
 
@@ -54,6 +55,7 @@
         showError(field, 'Please enter a valid email address.');
         return false;
       }
+      showValid(field);
       return true;
     }
 
@@ -63,6 +65,7 @@
         showError(field, 'Please enter a subject.');
         return false;
       }
+      showValid(field);
       return true;
     }
 
@@ -72,12 +75,17 @@
         showError(field, 'Please enter a message.');
         return false;
       }
+      showValid(field);
       return true;
     }
   }
 
   function isValidEmail(value) {
     return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value);
+  }
+
+  function showValid(field) {
+    field.classList.add('field-valid');
   }
 
   function showError(field, message) {
@@ -89,7 +97,7 @@
   }
 
   function clearError(field) {
-    field.classList.remove('field-invalid');
+    field.classList.remove('field-invalid', 'field-valid');
     const errorSpan = field.parentElement.querySelector('.error-msg');
     if (errorSpan) {
       errorSpan.textContent = '';

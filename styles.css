@@ -25,6 +25,7 @@
   --red: #a63a42;
   --red-light: #d4686e;
   --rose: #e8b0af;
+  --green: #3a7d44;
 
   --text-dark: #332228;
   --text-medium: #4d363d;
@@ -577,6 +578,11 @@ nav a.active {
 .form-group input.field-invalid,
 .form-group textarea.field-invalid {
   border-color: var(--red);
+}
+
+.form-group input.field-valid,
+.form-group textarea.field-valid {
+  border-color: var(--green);
 }
 
 .error-msg {
