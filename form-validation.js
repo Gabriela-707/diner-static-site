@@ -15,12 +15,15 @@
       subjectField.addEventListener('blur', () => validateSubject(subjectField));
       messageField.addEventListener('blur', () => validateMessage(messageField));
 
+      const successMsg = document.getElementById('form-success');
+
       form.addEventListener('submit', (event) => {
         event.preventDefault();
 
         const isValid = validateForm();
         if (isValid) {
-          console.log('Form is valid — ready to submit.');
+          form.hidden = true;
+          if (successMsg) successMsg.hidden = false;
         }
       });
     }
