@@ -15,15 +15,17 @@
   function validateForm() {
     const nameField = document.getElementById('name');
     const emailField = document.getElementById('email');
+    const subjectField = document.getElementById('subject');
     const messageField = document.getElementById('message');
 
-    if (!nameField || !emailField || !messageField) {
+    if (!nameField || !emailField || !subjectField || !messageField) {
       console.error('One or more form fields are missing from the DOM.');
       return false;
     }
 
     clearError(nameField);
     clearError(emailField);
+    clearError(subjectField);
     clearError(messageField);
 
     let isValid = true;
@@ -38,6 +40,11 @@
       isValid = false;
     } else if (!isValidEmail(emailField.value.trim())) {
       showError(emailField, 'Please enter a valid email address.');
+      isValid = false;
+    }
+
+    if (!subjectField.value.trim()) {
+      showError(subjectField, 'Please enter a subject.');
       isValid = false;
     }
 
