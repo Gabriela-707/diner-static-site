@@ -610,6 +610,7 @@ nav a.active {
 .form-success-body {
   color: var(--text-medium);
   font-size: 0.95rem;
+  margin-bottom: 0;
 }
 
 .contact-info-card {
