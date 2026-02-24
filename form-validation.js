@@ -1,64 +1,71 @@
-const form = document.getElementById('contact-form');
+(function () {
+  const form = document.getElementById('contact-form');
 
-if (form) {
-  form.addEventListener('submit', function (event) {
-    event.preventDefault();
+  if (form) {
+    form.addEventListener('submit', (event) => {
+      event.preventDefault();
 
-    const isValid = validateForm();
-    if (isValid) {
-      console.log('Form is valid — ready to submit.');
+      const isValid = validateForm();
+      if (isValid) {
+        console.log('Form is valid — ready to submit.');
+      }
+    });
+  }
+
+  function validateForm() {
+    const nameField = document.getElementById('name');
+    const emailField = document.getElementById('email');
+    const messageField = document.getElementById('message');
+
+    if (!nameField || !emailField || !messageField) {
+      console.error('One or more form fields are missing from the DOM.');
+      return false;
     }
-  });
-}
 
-function validateForm() {
-  let isValid = true;
+    clearError(nameField);
+    clearError(emailField);
+    clearError(messageField);
 
-  const name = document.getElementById('name');
-  const email = document.getElementById('email');
-  const message = document.getElementById('message');
+    let isValid = true;
 
-  clearError(name);
-  clearError(email);
-  clearError(message);
+    if (!nameField.value.trim()) {
+      showError(nameField, 'Please enter your name.');
+      isValid = false;
+    }
 
-  if (!name.value.trim()) {
-    showError(name, 'Please enter your name.');
-    isValid = false;
+    if (!emailField.value.trim()) {
+      showError(emailField, 'Please enter your email address.');
+      isValid = false;
+    } else if (!isValidEmail(emailField.value.trim())) {
+      showError(emailField, 'Please enter a valid email address.');
+      isValid = false;
+    }
+
+    if (!messageField.value.trim()) {
+      showError(messageField, 'Please enter a message.');
+      isValid = false;
+    }
+
+    return isValid;
   }
 
-  if (!email.value.trim()) {
-    showError(email, 'Please enter your email address.');
-    isValid = false;
-  } else if (!isValidEmail(email.value.trim())) {
-    showError(email, 'Please enter a valid email address.');
-    isValid = false;
+  function isValidEmail(value) {
+    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value);
   }
 
-  if (!message.value.trim()) {
-    showError(message, 'Please enter a message.');
-    isValid = false;
+  function showError(field, message) {
+    field.classList.add('input-error');
+    const error = document.createElement('span');
+    error.className = 'field-error';
+    error.textContent = message;
+    field.insertAdjacentElement('afterend', error);
   }
 
-  return isValid;
-}
-
-function isValidEmail(value) {
-  return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value);
-}
-
-function showError(field, message) {
-  field.classList.add('input-error');
-  const error = document.createElement('span');
-  error.className = 'field-error';
-  error.textContent = message;
-  field.insertAdjacentElement('afterend', error);
-}
-
-function clearError(field) {
-  field.classList.remove('input-error');
-  const existing = field.nextElementSibling;
-  if (existing && existing.classList.contains('field-error')) {
-    existing.remove();
+  function clearError(field) {
+    field.classList.remove('input-error');
+    const existing = field.parentElement.querySelector('.field-error');
+    if (existing) {
+      existing.remove();
+    }
   }
-}
+})();
