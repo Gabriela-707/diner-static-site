@@ -54,18 +54,18 @@
   }
 
   function showError(field, message) {
-    field.classList.add('input-error');
-    const error = document.createElement('span');
-    error.className = 'field-error';
-    error.textContent = message;
-    field.insertAdjacentElement('afterend', error);
+    field.classList.add('field-invalid');
+    const errorSpan = field.parentElement.querySelector('.error-msg');
+    if (errorSpan) {
+      errorSpan.textContent = message;
+    }
   }
 
   function clearError(field) {
-    field.classList.remove('input-error');
-    const existing = field.parentElement.querySelector('.field-error');
-    if (existing) {
-      existing.remove();
+    field.classList.remove('field-invalid');
+    const errorSpan = field.parentElement.querySelector('.error-msg');
+    if (errorSpan) {
+      errorSpan.textContent = '';
     }
   }
 })();

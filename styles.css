@@ -574,12 +574,12 @@ nav a.active {
   min-height: 120px;
 }
 
-.form-group input.input-error,
-.form-group textarea.input-error {
+.form-group input.field-invalid,
+.form-group textarea.field-invalid {
   border-color: var(--red);
 }
 
-.field-error {
+.error-msg {
   display: block;
   margin-top: 0.3rem;
   font-size: 0.875rem;
