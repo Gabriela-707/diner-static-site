@@ -578,10 +578,16 @@ nav a.active {
 .form-group input.field-invalid,
 .form-group textarea.field-invalid {
   border-color: var(--red);
+  background: #fdf5f5;
 }
 
 .form-group input.field-valid,
 .form-group textarea.field-valid {
+  border-color: var(--green);
+}
+
+.form-group input.field-valid:focus,
+.form-group textarea.field-valid:focus {
   border-color: var(--green);
 }
 
@@ -590,6 +596,10 @@ nav a.active {
   margin-top: 0.3rem;
   font-size: 0.875rem;
   color: var(--red);
+}
+
+.error-msg:not(:empty)::before {
+  content: '✕\00a0';
 }
 
 .form-success {
@@ -605,6 +615,10 @@ nav a.active {
   font-weight: 700;
   color: var(--green);
   margin-bottom: 0.4rem;
+}
+
+.form-success-title::before {
+  content: '✓\00a0';
 }
 
 .form-success-body {
