@@ -574,6 +574,18 @@ nav a.active {
   min-height: 120px;
 }
 
+.form-group input.input-error,
+.form-group textarea.input-error {
+  border-color: var(--red);
+}
+
+.field-error {
+  display: block;
+  margin-top: 0.3rem;
+  font-size: 0.875rem;
+  color: var(--red);
+}
+
 .contact-info-card {
   background: var(--white);
   padding: 2.5rem;
