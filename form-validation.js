@@ -25,7 +25,10 @@
         if (isValid) {
           if (formIntro) formIntro.hidden = true;
           form.hidden = true;
-          if (successMsg) successMsg.hidden = false;
+          if (successMsg) {
+            successMsg.hidden = false;
+            successMsg.scrollIntoView({ behavior: 'smooth', block: 'center' });
+          }
         }
       });
     }
