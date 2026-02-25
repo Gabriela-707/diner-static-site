@@ -25,6 +25,7 @@
   --red: #a63a42;
   --red-light: #d4686e;
   --rose: #e8b0af;
+  --green: #3a7d44;
 
   --text-dark: #332228;
   --text-medium: #4d363d;
@@ -572,6 +573,58 @@ nav a.active {
 .form-group textarea {
   resize: vertical;
   min-height: 120px;
+}
+
+.form-group input.field-invalid,
+.form-group textarea.field-invalid {
+  border-color: var(--red);
+  background: #fdf5f5;
+}
+
+.form-group input.field-valid,
+.form-group textarea.field-valid {
+  border-color: var(--green);
+}
+
+.form-group input.field-valid:focus,
+.form-group textarea.field-valid:focus {
+  border-color: var(--green);
+}
+
+.error-msg {
+  display: block;
+  margin-top: 0.3rem;
+  font-size: 0.875rem;
+  color: var(--red);
+}
+
+.error-msg:not(:empty)::before {
+  content: '✕\00a0';
+}
+
+.form-success {
+  padding: 1.5rem;
+  background: var(--ice);
+  border: 2px solid var(--green);
+  margin-bottom: 1.5rem;
+}
+
+.form-success-title {
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--green);
+  margin-bottom: 0.4rem;
+}
+
+.form-success-title::before {
+  content: '✓\00a0';
+}
+
+.form-success-body {
+  color: var(--text-medium);
+  font-size: 0.95rem;
+  margin-bottom: 0;
 }
 
 .contact-info-card {
